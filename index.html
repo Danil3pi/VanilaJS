@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html {
+            /*Значение в скобках url() без ковычек*/
+            background: linear-gradient(20deg, rgba(222, 222, 222, 0.5),
+                    rgba(3, 3, 3, 0.5)), url(Time.jpg) no-repeat;
+
+            background-size: cover;
+            box-sizing: border-box;
+
+            font-family: Arial, Helvetica, sans-serif;
+
+            /* А вот тут сделано как в статье */
+            font-size: 10px;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .clock {
+            width: 30rem;
+            height: 30rem;
+
+            border: 5px solid white;
+            border-radius: 50%;
+
+            /*Можно сделать выравнивание по горизонтали без flex*/
+            margin: 50px auto;
+            padding: 2rem;
+
+            position: relative;
+        }
+
+        .clock-face{
+            height: 100%;
+            width: 100%;
+            position: relative;
+        }
+
+        .hand{
+            position: absolute;
+            top: 50%;
+            height: 6px;
+            width: 50%;
+            color: black;
+
+            transform: rotate(90deg);
+            transform-origin: 100%;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="clock">
+        <div class="clock-face">
+            <div class="hand"></div>
+            <div class="hand"></div>
+            <div class="hand"></div>
+        </div>
+    </div>
+</body>
+
+</html>
