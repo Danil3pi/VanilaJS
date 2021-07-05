@@ -11,7 +11,7 @@
             /*Значение в скобках url() без ковычек*/
             background: linear-gradient(20deg, rgba(222, 222, 222, 0.5),
                     rgba(3, 3, 3, 0.5)), url(Time.jpg) no-repeat;
-
+            background-position: center;
             background-size: cover;
             box-sizing: border-box;
 
@@ -24,6 +24,7 @@
         body {
             display: flex;
             align-items: center;
+            justify-content: center;
             min-height: 100vh;
         }
 
@@ -35,7 +36,7 @@
             border-radius: 50%;
 
             /*Можно сделать выравнивание по горизонтали без flex*/
-            margin: 50px auto;
+            /* margin: 50px auto; */
             padding: 2rem;
 
             position: relative;
@@ -52,11 +53,13 @@
             top: 50%;
             height: 6px;
             width: 50%;
-            color: black;
+            /* !!!BACKGROUND!!! */
+            background: black;
 
+            transition: all 0.05s;
             transform: rotate(90deg);
             transform-origin: 100%;
-            border: 1px solid black;
+            border-radius: 22%;
         }
     </style>
 </head>
