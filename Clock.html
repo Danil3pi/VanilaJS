@@ -68,11 +68,24 @@
 <body>
     <div class="clock">
         <div class="clock-face">
-            <div class="hand"></div>
+            <div class="hand second-hand"></div>
             <div class="hand"></div>
             <div class="hand"></div>
         </div>
     </div>
+    <script>
+        let secondHand = document.body.querySelector('.hand.second-hand');
+
+        function getTime() {
+            let date = new Date();
+            console.log(date.getSeconds());
+            let seconds = date.getSeconds();
+            let second_degre = ((seconds / 60) * 360) + 90;
+            secondHand.style.transform = `rotate(${second_degre}deg)`;
+        }
+
+        setInterval(getTime, 1000);
+    </script>
 </body>
 
 </html>
